@@ -17,9 +17,9 @@ if (location = 'NAM') {
 let products = [
 {item: 'shoes', price: 300 * 1},
 {item: 'toys', price: 100 * 5},
-{item: 'shirts', price: 150 * 0},
+{item: 'shirts', price: 150 * NONE_SELECTED},
 {item: 'batteries', price: 35 * 2},
-{item: 'pens', price: 5 * 0}, 
+{item: 'pens', price: 5 * NONE_SELECTED}, 
 ]
 
 let totalCost = 0;
@@ -33,17 +33,15 @@ if (totalCost >= 1000 && customers ===1 && (location = 'RSA' || 'NAM')) {
     shipping = 0;
 } else {
     shipping = 400;
-}
-
+} 
 
 if (shipping === 0 && customers !== 1) {
     console.log(FREE_WARNING);
-}
+} 
 
 if (location = 'NK') {
     console.log(BANNED_WARNING);
 } 
-
 
 
 console.log('Price:', 'R', totalCost + shipping);
